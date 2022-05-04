@@ -1,4 +1,4 @@
-run = "mvn -Dtest=TestBoard#flipRow test"
+run = "mvn -q -Dtest=TestBoard#flipRow test"
 
 [packager]
 language = "java"
@@ -6,4 +6,4 @@ language = "java"
 [nix]
 channel = "stable-21_11"
 
-# mvn package && java -cp target/Othello-1.0.jar com.game.othello.Othello
+# mvn -q package && java -cp target/Othello-1.0.jar com.game.othello.Othello
