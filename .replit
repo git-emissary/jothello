@@ -1,0 +1,4 @@
+language = "java"
+run = "mvn -Dtest=TestBoard#flipRow test"
+
+# mvn package && java -cp target/Othello-1.0.jar com.game.othello.Othello
