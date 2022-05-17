@@ -22,12 +22,7 @@ public class TestBoard {
   private void assertEqBoards(Board expected, Board board) {
     try {
       assertArrayEquals(expected.getDisks(), board.getDisks());
-    } catch (AssertionError e) {
-      // System.out.printf("\nwant:");
-      // expected.print();
-      // System.out.printf("got:");
-      // board.print();
-      // System.out.println();
+    } catch (Exception e) {
       throw e;
     }
   }

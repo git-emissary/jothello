@@ -15,6 +15,6 @@ public class TestRunner {
   }
   
   public static void main() {
-    runTests();
+    runTests();      
   }
 }
