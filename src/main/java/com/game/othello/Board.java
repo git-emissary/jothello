@@ -44,6 +44,16 @@ class Board {
     }
   }
 
+  private int getStartIndex(int delta, int first, int second) {
+    int index = first;
+    if (delta > 0) {
+      index = Math.min(first, second);
+    } else if (delta < 0) {
+      index = Math.max(first, second);
+    }
+    return index;
+  }
+
   private int getSign(int delta) {
     int sign = 0;
     if (delta > 0) {
@@ -108,6 +118,21 @@ class Board {
     }
 
     // TODO: fill in rest of implementation
+
+    int row = this.getStartIndex(deltaRow, i1, i2);
+    int rowIncr = this.getSign(deltaRow);
+    int col = this.getStartIndex(deltaCol, j1, j2);
+    int colIncr = this.getSign(deltaCol);
+
+    for (int i = row, j = col;
+        // Within bounds of change.
+        i >= Math.min(i1, i2)
+            && i <= row + Math.abs(deltaRow)
+            && j >= Math.min(j1, j2)
+            && j <= col + Math.abs(deltaCol);
+        i += rowIncr, j += colIncr) {
+      this.setDisk(i, j, target);
+    }
   }
 
   // This method applies flip() from position (i,j) to the closest target disk(s)
