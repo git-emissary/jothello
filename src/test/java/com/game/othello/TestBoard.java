@@ -1,7 +1,6 @@
 package com.game.othello;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
 import java.lang.AssertionError;
@@ -22,13 +21,13 @@ public class TestBoard {
 
   private void assertEqBoards(Board expected, Board board) {
     try {
-      assertEquals(expected.getDisks(), board.getDisks());
+      assertArrayEquals(expected.getDisks(), board.getDisks());
     } catch (AssertionError e) {
-      System.out.printf("\nwant:");
-      expected.print();
-      System.out.printf("got:");
-      board.print();
-      System.out.println();
+      // System.out.printf("\nwant:");
+      // expected.print();
+      // System.out.printf("got:");
+      // board.print();
+      // System.out.println();
       throw e;
     }
   }

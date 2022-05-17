@@ -1,6 +1,6 @@
 package com.game.othello;
 
-class Disks {
+public class Disks {
   static final char BLANK = '_'; // indicates empty spot in board
   static final char ORB = 'o';
   static final char CROSS = 'x';

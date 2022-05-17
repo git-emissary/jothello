@@ -44,16 +44,6 @@ class Board {
     }
   }
 
-  private int getStartIndex(int delta, int first, int second) {
-    int index = first;
-    if (delta > 0) {
-      index = Math.min(first, second);
-    } else if (delta < 0) {
-      index = Math.max(first, second);
-    }
-    return index;
-  }
-
   private int getSign(int delta) {
     int sign = 0;
     if (delta > 0) {
@@ -81,7 +71,7 @@ class Board {
   //
   // You must use setDisk() method defined above.
   //
-  // Hints: you may use getSign() and getStartIndex() defined above.
+  // Hints: you may use getSign() defined above.
   //
   // Eg. ROW
   // From positions (2,0) to (2,3)
