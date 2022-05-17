@@ -108,15 +108,6 @@ class Board {
     }
 
     // TODO: fill in rest of implementation
-    if (j1 < j2) {
-      for (int col = j1; col <= j2; col++) {
-        this.setDisk(i1, col, target);
-      }     
-    } else {
-      for (int col = j2; col <= j1; col++) {
-        this.setDisk(i1, col, target);
-      }
-    }
   }
 
   // This method applies flip() from position (i,j) to the closest target disk(s)
